@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmos Pasteleria -Pasteles fuera de este mundo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e2cfea;
+        }
+        /* Estilo de header */
+        
+        header {
+            background-color: #6247aa;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+            display: flex;
+            border-radius: 20px 20px 0px 0px;
+        }
+        
+        .header__logo {
+            margin: 0.5em;
+        }
+        
+        .header__logo>img {
+            width: 150px;
+            border-radius: 20px 0px 20px 0px;
+        }
+        
+        .mainPanel {
+            padding: 1em;
+        }
+        /* Estilo de footer */
+        
+        footer {
+            background-color: #6247aa;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-content: space-around;
+            border-radius: 0px 0px 20px 20px;
+        }
+        
+        .footerItem {
+            padding: 0.5em;
+            text-align: left;
+        }
+        
+        .footerItem-title {
+            font-weight: bold;
+        }
+        
+        .footerItem-info {
+            margin-top: 0.5em;
+        }
+        /* Responsive layout */
+        
+        @media (max-width: 600px) {
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header__logo">
+            <img src="images/LogotipoCosmosPasteleria.png" alt="" />
+        </div>
+        <div>
+            <h2>Pasteleria Cosmos</h2>
+            Pasteles fuera de este mundo
+        </div>
+        <!-- <h3>Pasteles fuera de este mundo</h3> -->
+    </header>
+    <section id="mainPanel" class="mainPanel">
+        <!-- <nav>
+            <ul>
+                <li>
+                    <a href="#">Pasteles</a>
+                </li>
+                <li><a href="#">Adornos</a></li>
+                <li><a href="#">Hacer pedido</a></li>
+            </ul>
+        </nav>-->
+
+        <article id="Sabores">
+            <h2>Sabores</h2>
+        </article>
+        <article id="Accesorios">
+            <h2>Accesorios</h2>
+        </article>
+    </section>
+    <footer>
+        <section id="addressCard" class="footerItem">
+            <div class="footerItem-title">Dirección</div>
+            <div class="footerItem-info">p sherman calle wallaby 42 sidney</div>
+        </section>
+        <section id="timeTableCard" class="footerItem">
+            <div class="footerItem-title">Horarios</div>
+            <div class="footerItem-info">
+                Lunes a Sábado 8:00am a 9:00 pm y Domingos de 9:00am a 9:00pm
+            </div>
+        </section>
+        <section id="PhoneCard" class="footerItem">
+            <div class="footerItem-title">Teléfono</div>
+            <div class="footerItem-info">81101010</div>
+        </section>
+    </footer>
+</body>
+
+</html>
