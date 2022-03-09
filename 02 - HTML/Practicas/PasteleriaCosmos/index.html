@@ -14,17 +14,16 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             background-color: #e2cfea;
+            margin: 0%;
         }
         /* Estilo de header */
         
         header {
             background-color: #6247aa;
-            padding: 30px;
             text-align: center;
             font-size: 35px;
             color: white;
             display: flex;
-            border-radius: 20px 20px 0px 0px;
         }
         
         .header__logo {
@@ -36,10 +35,67 @@
             border-radius: 20px 0px 20px 0px;
         }
         
-        .mainPanel {
-            padding: 1em;
+        #Products {
+            background-color: #a06cd5;
         }
-        /* Estilo de footer */
+        
+        .mainPanel {
+            padding-top: 1em;
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+        }
+        
+        .mainPanel article {
+            margin-bottom: 1em;
+        }
+        
+        .sectionDivider {
+            display: block;
+            /* background: linear-gradient( 180deg, rgba(98, 71, 170, 1) 0%, rgba(16, 43, 63, 1) 35%, rgba(6, 39, 38, 1) 100%); */
+            background-color: #102b3f;
+            color: white;
+            padding-left: 1.5em;
+            border: #102b3f solid 2px;
+            border-radius: 20px 20px 0px 0px;
+        }
+        
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #a06cd5;
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+        
+        .products__item {
+            padding: 1em;
+            background: rgb(98, 71, 170);
+            background: linear-gradient( 90deg, rgba(98, 71, 170, 1) 0%, rgba(16, 43, 63, 1) 35%, rgba(6, 39, 38, 1) 100%);
+            color: white;
+            border-radius: 20px 0px 20px 0px;
+            margin: 0.5em;
+            box-shadow: 10px 10px 5px 0px #102b3f;
+            -webkit-box-shadow: 10px 10px 5px 0px #102b3f;
+            -moz-box-shadow: 10px 10px 5px 0px #102b3f;
+        }
+        
+        .products__item_title {
+            text-align: center;
+            font-size: large;
+            font-weight: bold;
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+        }
+        
+        .products__item_price {
+            text-align: center;
+        }
+        
+        .products__item_image img {
+            width: 200px;
+            border-radius: 20px 0px 20px 0px;
+        }
         
         footer {
             background-color: #6247aa;
@@ -50,22 +106,39 @@
             flex-wrap: wrap;
             justify-content: center;
             justify-content: space-around;
-            border-radius: 0px 0px 20px 20px;
+            border: papayawhip dashed 2px;
         }
         
         .footerItem {
             padding: 0.5em;
             text-align: left;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 5px;
+            text-align: left;
+            border: papayawhip dashed 2px;
         }
         
         .footerItem-title {
             font-weight: bold;
+            grid-column: 1 / 5;
+            grid-row: 1;
+            text-align: left;
+            border: papayawhip dashed 2px;
+        }
+        
+        .footerItem-icon {
+            grid-column: 1;
+            grid-row: 2;
+            text-align: left;
         }
         
         .footerItem-info {
+            grid-column: 2/5;
+            grid-row: 2;
             margin-top: 0.5em;
+            text-align: left;
         }
-        /* Responsive layout */
         
         @media (max-width: 600px) {
             nav,
@@ -100,25 +173,210 @@
         </nav>-->
 
         <article id="Sabores">
-            <h2>Sabores</h2>
+            <section class="sectionDivider">
+                <h2>Sabores</h2>
+            </section>
+            <section class="products">
+                <div class="products__item">
+                    <div class="products__item_image">
+                        <picture>
+                            <img src="images/HoyoNegro.jpg" alt="" />
+                        </picture>
+                    </div>
+                    <div class="products__item_title">Materia Oscura</div>
+                    <div class="products__item_price">$350.00</div>
+                </div>
+                <div class="products__item">
+                    <div class="products__item_image">
+                        <picture>
+                            <img src="images/Saturno.jpg" alt="" />
+                        </picture>
+                    </div>
+                    <div class="products__item_title">Saturno</div>
+                    <div class="products__item_price">$350.00</div>
+                </div>
+                <div class="products__item">
+                    <div class="products__item_image">
+                        <picture>
+                            <img src="images/Luna.jpg" alt="" />
+                        </picture>
+                    </div>
+                    <div class="products__item_title">Luna</div>
+                    <div class="products__item_price">$350.00</div>
+                </div>
+                <div class="products__item">
+                    <div class="products__item_image">
+                        <picture>
+                            <img src="images/Marte.jpg" alt="" />
+                        </picture>
+                    </div>
+                    <div class="products__item_title">Marte</div>
+                    <div class="products__item_price">$350.00</div>
+                </div>
+                <div class="products__item">
+                    <div class="products__item_image">
+                        <picture>
+                            <img src="images/Pluton.jpg" alt="" />
+                        </picture>
+                    </div>
+                    <div class="products__item_title">Plutón</div>
+                    <div class="products__item_price">$350.00</div>
+                </div>
+                <div class="products__item">
+                    <div class="products__item_image">
+                        <picture>
+                            <img src="images/VíaLactea.jpg" alt="" />
+                        </picture>
+                    </div>
+                    <div class="products__item_title">Vía Lactea</div>
+                    <div class="products__item_price">$350.00</div>
+                </div>
+                <div class="products__item">
+                    <div class="products__item_image">
+                        <picture>
+                            <img src="images/Quasar.jpg" alt="" />
+                        </picture>
+                    </div>
+                    <div class="products__item_title">Quasar</div>
+                    <div class="products__item_price">$350.00</div>
+                </div>
+                <div class="products__item">
+                    <div class="products__item_image">
+                        <picture>
+                            <img src="images/Urano.png" alt="Asteroides" />
+                        </picture>
+                    </div>
+                    <div class="products__item_title">Urano</div>
+                    <div class="products__item_price">$350.00</div>
+                </div>
+                <div class="products__item">
+                    <div class="products__item_image">
+                        <picture>
+                            <img src="images/Asteroides.jpg" alt="Asteroides" />
+                        </picture>
+                    </div>
+                    <div class="products__item_title">Asteroides</div>
+                    <div class="products__item_price">$95.00</div>
+                </div>
+            </section>
         </article>
+
         <article id="Accesorios">
-            <h2>Accesorios</h2>
+            <section class="sectionDivider">
+                <h2>Accesorios</h2>
+            </section>
+            <section class="products">
+                <div class="products__item">
+                    <div class="products__item_image">
+                        <picture>
+                            <img src="images/TopperAzul.jpg" alt="TopperAzul" />
+                        </picture>
+                    </div>
+                    <div class="products__item_title">Cake Topper Azul</div>
+                    <div class="products__item_price">$95.00</div>
+                </div>
+                <div class="products__item">
+                    <div class="products__item_image">
+                        <picture>
+                            <img src="images/TopperRojo.jpg" alt="TopperRojo" />
+                        </picture>
+                    </div>
+                    <div class="products__item_title">Cake Topper Rojo</div>
+                    <div class="products__item_price">$95.00</div>
+                </div>
+                <div class="products__item">
+                    <div class="products__item_image">
+                        <picture>
+                            <img src="images/VelaBengalaBlanca.jpg" alt="VelaBengalaBlanca" />
+                        </picture>
+                    </div>
+                    <div class="products__item_title">Vela Bengala Blanca</div>
+                    <div class="products__item_price">$100.00</div>
+                </div>
+                <div class="products__item">
+                    <div class="products__item_image">
+                        <picture>
+                            <img src="images/VelaBengalaNegra.jpg" alt="VelaBengalaNegra" />
+                        </picture>
+                    </div>
+                    <div class="products__item_title">Vela Bengala Negra</div>
+                    <div class="products__item_price">$100.00</div>
+                </div>
+                <div class="products__item">
+                    <div class="products__item_image">
+                        <picture>
+                            <img src="images/velaChispasMagicasChica.png" alt="velaChispasMagicasChica" />
+                        </picture>
+                    </div>
+                    <div class="products__item_title">Velas mágicas chicas</div>
+                    <div class="products__item_price">$50.00</div>
+                </div>
+            </section>
         </article>
     </section>
     <footer>
         <section id="addressCard" class="footerItem">
             <div class="footerItem-title">Dirección</div>
+            <div class="footerIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="papayawhip" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <line x1="18" y1="6" x2="18" y2="6.01" />
+            <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+            <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+            <line x1="9" y1="4" x2="9" y2="17" />
+            <line x1="15" y1="15" x2="15" y2="20" />
+          </svg>
+            </div>
             <div class="footerItem-info">p sherman calle wallaby 42 sidney</div>
         </section>
         <section id="timeTableCard" class="footerItem">
             <div class="footerItem-title">Horarios</div>
+            <div class="footerIcon">
+                <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-clock"
+              width="44"
+              height="44"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="papayawhip"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="12" cy="12" r="9" />
+              <polyline points="12 7 12 12 15 15" />
+            </svg>
+          </span>
+            </div>
             <div class="footerItem-info">
-                Lunes a Sábado 8:00am a 9:00 pm y Domingos de 9:00am a 9:00pm
+                Lunes a Sábado 8:00am a 9:00 pm
+                <br />Domingos de 9:00am a 9:00pm
             </div>
         </section>
         <section id="PhoneCard" class="footerItem">
             <div class="footerItem-title">Teléfono</div>
+            <div class="footerIcon">
+                <span><svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-phone"
+              width="44"
+              height="44"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="papayawhip"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+              /></svg
+          ></span>
+            </div>
             <div class="footerItem-info">81101010</div>
         </section>
     </footer>
