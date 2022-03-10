@@ -25,16 +25,54 @@
             text-align: center;
             font-size: 35px;
             color: white;
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
         }
         
         .header__logo {
             margin: 0.5em;
+            grid-column: 1;
+            grid-row: 1;
         }
         
         .header__logo>img {
             width: 150px;
             border-radius: 20px 0px 20px 0px;
+        }
+        
+        .header__title {
+            text-align: center;
+            grid-column: 2 / 5;
+            grid-row: 1;
+            padding: 1em;
+        }
+        
+        .header__nav {
+            padding: 0em;
+            margin: 0em;
+            grid-column: 1/5;
+            grid-row: 2;
+        }
+        
+        nav>ul {
+            margin-top: 0;
+            margin-bottom: 0.5em;
+        }
+        
+        ul>li {
+            display: inline-block;
+            background-color: #102b3f;
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            border-radius: 20px 0px 20px 0px;
+            box-shadow: 10px 10px 5px 0px #102b3f;
+            -webkit-box-shadow: 10px 10px 5px 0px #102b3f;
+            -moz-box-shadow: 10px 10px 5px 0px #102b3f;
+        }
+        
+        a {
+            color: papayawhip;
+            text-decoration: none;
         }
         
         #Products {
@@ -185,22 +223,26 @@
         <div class="header__logo">
             <img src="images/LogotipoCosmosPasteleria.png" alt="" />
         </div>
-        <div>
-            <h2>Pasteleria Cosmos</h2>
-            Pasteles fuera de este mundo
+        <div class="header__title">
+            Pasteleria Cosmos<br/> Pasteles fuera de este mundo
+        </div>
+        <div class="header__nav">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="cliente.html">Cliente</a>
+                    </li>
+                    <li>
+                        <a href="pastelero.html">Pastelero</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <section id="mainPanel" class="mainPanel">
-        <!-- <nav>
-            <ul>
-                <li>
-                    <a href="#">Pasteles</a>
-                </li>
-                <li><a href="#">Adornos</a></li>
-                <li><a href="#">Hacer pedido</a></li>
-            </ul>
-        </nav>-->
-
         <article id="Nuevo Pedido">
             <section class="sectionDivider">
                 <h2>Nuevo Pedido</h2>
