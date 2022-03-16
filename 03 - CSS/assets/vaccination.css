@@ -10,12 +10,176 @@
     }
     /* div,
     section {
+        border: red dashed 2px;
+    }
+     */
+    
+    .section {
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+        color: #76839A;
+    }
+    /* .section div {
         border: red dashed 1px;
     } */
     
+    .section__title {
+        color: #264476;
+        font-size: larger;
+        font-weight: bold;
+    }
+    
+    .section__info {
+        font-size: larger;
+        padding-bottom: 1em;
+        color: #76839A;
+    }
+    
+    .item {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
+        border: #F1F5FF solid 2px;
+        border-radius: 15px;
+        margin-bottom: 1em;
+    }
+    
+    .item:hover {
+        border: 0;
+        box-shadow: 0 4px 8px 0 #F1F5FF, 0 6px 20px 0 #F1F5FF;
+    }
+    
+    .whyItems {
+        grid-column: 1/3;
+        grid-row: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+    
+    .whyItem {
+        width: 200px;
+        /* margin: auto; */
+        flex-basis: auto;
+    }
+    
+    .whyItem__icon {
+        padding-bottom: 1em;
+    }
+    
+    .whyItem__icon picture {
+        background-color: #F1F5FF;
+        display: inline-block;
+        padding: 1em;
+        border-radius: 5px;
+    }
+    
+    .whyItem__icon svg {
+        stroke: #264476;
+        margin: auto;
+        /* fill: #3756D4; */
+    }
+    
+    .whyItem__title {
+        color: #264476;
+        font-weight: bold;
+        font-size: 20px;
+        padding-bottom: 1em;
+    }
+    
+    .whyItem__content {
+        padding-bottom: 1em;
+        margin-bottom: 1em;
+    }
+    
+    .preparation {
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+        color: #76839A;
+    }
+    
+    .preparationItem {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 5px;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
+        border: #F1F5FF solid 2px;
+        border-radius: 15px;
+        margin-bottom: 1em;
+    }
+    
+    .preparationItem:hover {
+        border: 0;
+        box-shadow: 0 4px 8px 0 #F1F5FF, 0 6px 20px 0 #F1F5FF;
+    }
+    
+    .preparationItem:hover .preparationItem__content {
+        display: block;
+    }
+    
+    .preparationItem:hover .icon-tabler-fold-down {
+        display: none;
+    }
+    
+    .preparationItem:hover .icon-tabler-fold-up {
+        display: inline-block;
+    }
+    
+    .preparationItem__icon {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .preparationItem__icon picture {
+        background-color: #F1F5FF;
+        padding: 0.5em;
+        border-radius: 10px;
+    }
+    
+    .preparationItem__title {
+        color: #264476;
+        font-size: larger;
+        font-weight: bold;
+        padding: 0.5em;
+        grid-column: 2/6;
+        grid-row: 1;
+    }
+    
+    .preparationItem__toggle {
+        padding: 0.5em;
+        grid-column: 6;
+        grid-row: 1;
+        text-align: right;
+    }
+    
+    .icon-tabler-fold-up {
+        display: none;
+    }
+    
+    .preparationItem__toggle picture {
+        background-color: #F1F5FF;
+        padding: 0.5em;
+        border-radius: 10px;
+    }
+    
+    .preparationItem__content {
+        padding: 0.5em;
+        grid-column: 2/6;
+        grid-row: 2;
+        display: none;
+    }
+    
     .emergencyContact {
         background-color: white;
-        /* padding: 1em; */
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 5px;
@@ -25,17 +189,6 @@
     .leftPanel {
         padding-left: 3em;
         padding-right: 2em;
-    }
-    
-    .leftPanel__info__title {
-        color: #264476;
-        font-size: larger;
-        font-weight: bold;
-    }
-    
-    .leftPanel__info {
-        font-size: larger;
-        padding-bottom: 1em;
     }
     
     .leftPanel__actions {
@@ -116,6 +269,15 @@
         padding-left: 2em;
         padding-bottom: 5em;
         text-align: right;
+    }
+    
+    .leftPanel__image {
+        position: relative;
+        left: 0;
+    }
+    
+    .leftPanel__image img {
+        height: 700px;
     }
     
     .rightPanel__image {
