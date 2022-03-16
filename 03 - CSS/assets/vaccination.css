@@ -8,11 +8,6 @@
         color: gray;
         font-weight: 500;
     }
-    /* div,
-    section {
-        border: red dashed 2px;
-    }
-     */
     
     .section {
         background-color: white;
@@ -21,9 +16,6 @@
         grid-gap: 5px;
         color: #76839A;
     }
-    /* .section div {
-        border: red dashed 1px;
-    } */
     
     .section__title {
         color: #264476;
@@ -52,6 +44,60 @@
         box-shadow: 0 4px 8px 0 #F1F5FF, 0 6px 20px 0 #F1F5FF;
     }
     
+    .item:hover .whyItem__icon picture {
+        border: white solid 2px;
+        box-shadow: 0 4px 8px 0 #F1F5FF, 0 6px 20px 0 #F1F5FF;
+    }
+    
+    .fightItems {
+        grid-column: 1/3;
+        grid-row: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 25px;
+        margin-top: 1em;
+    }
+    
+    .fightItem {
+        . flex-basis: auto;
+        color: #264476;
+    }
+    
+    .fightItem__icon {
+        display: inline-block;
+        height: fit-content;
+        box-shadow: 0 4px 8px 0 #FFF7DD, 0 6px 20px 0 #FFF7DD;
+        color: #264476;
+    }
+    
+    .fightItem__icon picture {
+        background-color: #FFF7DD;
+        border: white solid 1px;
+        border-radius: 5px;
+        display: inline-block;
+        padding: 0.10em;
+    }
+    
+    .fightItem__icon svg {
+        stroke: #FFF7DD;
+        fill: #FFCF11;
+        margin: auto;
+        vertical-align: bottom;
+    }
+    
+    .figth__footer {
+        grid-column: 1/3;
+        grid-row: 2;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2em;
+    }
+    
+    .fight__image {
+        width: 100%;
+    }
+    
     .whyItems {
         grid-column: 1/3;
         grid-row: 2;
@@ -63,7 +109,6 @@
     
     .whyItem {
         width: 200px;
-        /* margin: auto; */
         flex-basis: auto;
     }
     
@@ -134,12 +179,18 @@
         display: inline-block;
     }
     
+    .preparationItem:hover picture {
+        border: white solid 2px;
+        box-shadow: 0 4px 8px 0 #F1F5FF, 0 6px 20px 0 #F1F5FF;
+    }
+    
     .preparationItem__icon {
         grid-column: 1;
         grid-row: 1;
     }
     
     .preparationItem__icon picture {
+        display: inline-block;
         background-color: #F1F5FF;
         padding: 0.5em;
         border-radius: 10px;
