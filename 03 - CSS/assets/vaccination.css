@@ -27,18 +27,24 @@ a {
     box-shadow: 0 4px 8px 0 #76839A, 0 6px 20px 0 #76839A;
 }
 
+.title--big {
+    font-size: 50px;
+}
+
 .header {
     background: #E9F1FC;
-    /* background: linear-gradient(90deg, rgba(255, 255, 255, 0.1237628840598739) 0%, rgba(40, 113, 222, 1) 100%); */
+    background: linear-gradient( to right, white 0%, white 50%, rgb(233, 241, 252, 0.8) 55%, #E9F1FC 100%);
     display: flex;
     gap: 20px;
     justify-content: end;
+    padding-top: 1em;
     padding-bottom: 1em;
     padding-right: 2em;
 }
 
 .logo {
     display: block;
+    margin-left: 3em;
 }
 
 .logo__image {
@@ -285,7 +291,8 @@ a {
     display: none;
 }
 
-.preparationItem__toggle picture {
+.preparationItem__picture {
+    display: inline-block;
     background-color: #F1F5FF;
     padding: 0.5em;
     border-radius: 10px;
@@ -358,6 +365,9 @@ a {
     padding: 0;
     padding-left: 0.5em;
     margin: 0;
+    color: #3555D3;
+    font-weight: bold;
+    font-size: large;
 }
 
 .contactItem__content {
@@ -373,7 +383,6 @@ a {
     border: 0;
     padding: 1em;
     margin-top: 2em;
-    width: 100%;
     border-radius: 5px;
     grid-column: 1/5;
     grid-row: 3;
