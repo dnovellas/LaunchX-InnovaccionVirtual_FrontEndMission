@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex LaunchX Edition</title>
+    <link rel="stylesheet" href="./pokedex.css" />
+</head>
+
+<body>
+    <h1>Pokedex LaunchX</h1>
+
+    <section class="pokedex">
+        <section class="pokedex__leftPanel">
+            <div class="displayScreen">
+                <div class="displayScreen__header">
+                    <a href="#" class="button button--round button--red button--shadowed"></a>
+                    <a href="#" class="button button--round button--red button--shadowed"></a>
+                </div>
+                <image class="displayScreen__image">
+                    <img class="displayScreen__img" src="./pokeball.png" alt="Pokemon" id="pokeImg" width="150px" />
+                </image>
+                <div class="displayScreen__footer">
+                    <a href="#" class="button button--round button--red button--shadowed"></a>
+                </div>
+            </div>
+        </section>
+        <section class="pokedex__rightPanel">
+            <input type="text" placeholder="pikachu" id="pokeName" name="pokeName" />
+            <button onclick="fetchPokemon()">Buscar</button>
+        </section>
+    </section>
+
+
+
+</body>
+<footer>
+    <script src="./pokedex.js"></script>
+</footer>
+
+</html>

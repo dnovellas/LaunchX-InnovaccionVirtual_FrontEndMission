@@ -1,0 +1,100 @@
+.button {
+    border: black solid 2px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+.button--round {
+    border-radius: 50%;
+}
+
+.button--rectangular {
+    border-radius: 15px;
+}
+
+.button--red {
+    background-color: #B0100F;
+}
+
+.button--yellow {
+    background-color: #E6E65D;
+}
+
+.button--green {
+    background-color: #71CD41;
+}
+
+.button--black {
+    background-color: #000404;
+}
+
+.button--blue {
+    background-color: #006886;
+}
+
+.button--gray {
+    background-color: #E4E4E4;
+}
+
+.button--shadowed {
+    box-shadow: inset 5px 5px 5px 0px #000404;
+    -webkit-box-shadow: inset 5px 5px 5px 0px #000404;
+    -moz-box-shadow: inset 5px 5px 5px 0px #000404;
+}
+
+.pokedex {
+    background-color: #E61F3F;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 2em;
+    border-radius: 15px;
+}
+
+.pokedex__leftPanel {
+    flex-grow: 1;
+    border: black solid 2px;
+    padding: 1em;
+    border-radius: 15px;
+}
+
+.pokedex__rightPanel {
+    flex-grow: 1;
+    border: black solid 2px;
+}
+
+.displayScreen {
+    background-color: #E4E4E4;
+    padding-top: 1em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-bottom: 2.5em;
+    border-radius: 15px 15px 15px 45px;
+}
+
+.displayScreen__header {
+    border: papayawhip dashed 2px;
+    margin-bottom: 1em;
+}
+
+.displayScreen__footer {
+    border: papayawhip dashed 2px;
+    margin-top: 1em;
+}
+
+.displayScreen__image {
+    display: inline-block;
+    background-color: whitesmoke;
+}
+
+.displayScreen__img {
+    display: block;
+    background-color: whitesmoke;
+    border: black solid 2px;
+    border-radius: 5px;
+}
