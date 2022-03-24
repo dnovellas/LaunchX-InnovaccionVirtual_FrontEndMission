@@ -14,27 +14,148 @@
 
     <section class="pokedex">
         <section class="pokedex__leftPanel">
+            <section class="searchPanel">
+                <div class="button button--round button--small button--gray button--wrapper">
+                    <a href="#" class="button button--round button--blue button--lights button--big"></a>
+                </div>
+                <a href="#" class="button button--round button--red button--shadowed button--small"></a>
+                <a href="#" class="button button--round button--yellow button--shadowed button--small"></a>
+                <a href="#" class="button button--round button--green button--shadowed button--small"></a>
+                <input type="text" placeholder="pikachu" id="pokeName" name="pokeName" />
+                <button onclick="fetchPokemon()">Buscar</button>
+            </section>
             <div class="displayScreen">
                 <div class="displayScreen__header">
-                    <a href="#" class="button button--round button--red button--shadowed"></a>
-                    <a href="#" class="button button--round button--red button--shadowed"></a>
+                    <a href="#" class="button button--round button--red button--shadowed button--small"></a>
+                    <a href="#" class="button button--round button--red button--shadowed button--small"></a>
                 </div>
-                <image class="displayScreen__image">
+                <picture class="displayScreen__image">
                     <img class="displayScreen__img" src="./pokeball.png" alt="Pokemon" id="pokeImg" width="150px" />
-                </image>
+                    <section class="displayScreen__infoPanel">
+                        <span class="displayScreen__label" id="lblPokeNumber">#000</span>
+                        <span class="displayScreen__label" id="lblPokeName">???</span>
+                    </section>
+                </picture>
                 <div class="displayScreen__footer">
                     <a href="#" class="button button--round button--red button--shadowed"></a>
                 </div>
             </div>
         </section>
         <section class="pokedex__rightPanel">
-            <input type="text" placeholder="pikachu" id="pokeName" name="pokeName" />
-            <button onclick="fetchPokemon()">Buscar</button>
+            <div class="infoDisplayScreen">
+                <div class="statsDisplay">
+                    <div class="stat" id="pokehp">
+                        <div class="stat__gauge">
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                        </div>
+                        <div class="stat__label">PS</div>
+                    </div>
+                    <div class="stat" id="pokeatk">
+                        <div class="stat__gauge">
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                        </div>
+                        <div class="stat__label">ATK</div>
+                    </div>
+                    <div class="stat" id="pokedef">
+                        <div class="stat__gauge">
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                        </div>
+                        <div class="stat__label">DEF</div>
+                    </div>
+                    <div class="stat" id="pokespatk">
+                        <div class="stat__gauge">
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                        </div>
+                        <div class="stat__label">SP.ATK</div>
+                    </div>
+                    <div class="stat" id="pokespdef">
+                        <div class="stat__gauge">
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                        </div>
+                        <div class="stat__label">SP.DEF</div>
+                    </div>
+                    <div class="stat" id="pokeSpeed">
+                        <div class="stat__gauge">
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                            <div class="stat__gaugeBar"></div>
+                        </div>
+                        <div class="stat__label">SPEED</div>
+                    </div>
+                </div>
+            </div>
+            <section class="typesDisplay">
+                <div class="typeDisplay typeDisplay--left">
+                    <label class="typeBadge" id="lblPokeType01">???</label>
+                </div>
+                <div class="typeDisplay typeDisplay--right">
+                    <label class="typeBadge" id="lblPokeType02">???</label>
+                </div>
+            </section>
+            <section class="subDisplays">
+                <div class="subDisplay">
+                    <span class="subDisplay__label">Altura:</span>
+                    <span class="subDisplay__value" id="lblPokeHeight">???</span>
+                </div>
+                <div class="subDisplay">
+                    <span class="subDisplay__label">Peso:</span>
+                    <span class="subDisplay__value" id="lblPokeWeight">???</span>
+                </div>
+            </section>
         </section>
     </section>
-
-
-
 </body>
 <footer>
     <script src="./pokedex.js"></script>

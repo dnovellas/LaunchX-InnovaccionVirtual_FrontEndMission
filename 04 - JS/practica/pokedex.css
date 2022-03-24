@@ -1,100 +1,318 @@
-.button {
-    border: black solid 2px;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-}
-
-.button--round {
-    border-radius: 50%;
-}
-
-.button--rectangular {
-    border-radius: 15px;
-}
-
-.button--red {
-    background-color: #B0100F;
-}
-
-.button--yellow {
-    background-color: #E6E65D;
-}
-
-.button--green {
-    background-color: #71CD41;
-}
-
-.button--black {
-    background-color: #000404;
-}
-
-.button--blue {
-    background-color: #006886;
-}
-
-.button--gray {
-    background-color: #E4E4E4;
-}
-
-.button--shadowed {
-    box-shadow: inset 5px 5px 5px 0px #000404;
-    -webkit-box-shadow: inset 5px 5px 5px 0px #000404;
-    -moz-box-shadow: inset 5px 5px 5px 0px #000404;
-}
-
-.pokedex {
-    background-color: #E61F3F;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 2em;
-    border-radius: 15px;
-}
-
-.pokedex__leftPanel {
-    flex-grow: 1;
-    border: black solid 2px;
-    padding: 1em;
-    border-radius: 15px;
-}
-
-.pokedex__rightPanel {
-    flex-grow: 1;
-    border: black solid 2px;
-}
-
-.displayScreen {
-    background-color: #E4E4E4;
-    padding-top: 1em;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-    padding-bottom: 2.5em;
-    border-radius: 15px 15px 15px 45px;
-}
-
-.displayScreen__header {
-    border: papayawhip dashed 2px;
-    margin-bottom: 1em;
-}
-
-.displayScreen__footer {
-    border: papayawhip dashed 2px;
-    margin-top: 1em;
-}
-
-.displayScreen__image {
-    display: inline-block;
-    background-color: whitesmoke;
-}
-
-.displayScreen__img {
-    display: block;
-    background-color: whitesmoke;
-    border: black solid 2px;
-    border-radius: 5px;
-}
+            .button {
+                border: black solid 2px;
+                color: white;
+                padding: 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+            }
+            
+            .button--small {
+                padding: 10px;
+            }
+            
+            .button--medium {
+                padding: 15px;
+            }
+            
+            .button--big {
+                padding: 25px;
+            }
+            
+            .button--round {
+                border-radius: 50%;
+            }
+            
+            .button--rectangular {
+                border-radius: 15px;
+            }
+            
+            .button--red {
+                background-color: #B0100F;
+            }
+            
+            .button--yellow {
+                background-color: #E6E65D;
+            }
+            
+            .button--green {
+                background-color: #71CD41;
+            }
+            
+            .button--black {
+                background-color: #000404;
+            }
+            
+            .button--blue {
+                background-color: #006886;
+            }
+            
+            .button--gray {
+                background-color: #E4E4E4;
+            }
+            
+            .button--shadowed {
+                box-shadow: inset 5px -a5px 5px 0px #000404;
+                -webkit-box-shadow: inset -5px 5px 5px 0px #000404;
+                -moz-box-shadow: inset 5px -5px 5px 0px #000404;
+            }
+            
+            .button--OutsetShadowed {
+                box-shadow: 5px 5px 5px 0px #000404;
+                -webkit-box-shadow: 5px 5px 5px 0px #000404;
+                -moz-box-shadow: 5px 5px 5px 0px #000404;
+            }
+            
+            .button--lights {
+                box-shadow: inset 5px 5px 5px 0px whitesmoke;
+                -webkit-box-shadow: inset 5px 5px 5px 0px whitesmoke;
+                -moz-box-shadow: inset 5px 5px 5px 0px whitesmoke;
+            }
+            
+            .button--wrapper {
+                padding: 5px;
+            }
+            
+            .pokedex {
+                background-color: #E61F3F;
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                padding: 2em;
+                border-radius: 15px;
+            }
+            
+            .pokedex__leftPanel {
+                flex-grow: 1;
+                border: black solid 2px;
+                padding: 1em;
+                border-radius: 15px;
+            }
+            
+            .pokedex__rightPanel {
+                flex-grow: 1;
+                border: black solid 2px;
+                padding: 1em;
+                border-radius: 15px;
+            }
+            
+            .searchPanel {
+                vertical-align: text-top;
+                margin-bottom: 20px;
+            }
+            
+            .displayScreen {
+                background-color: #E4E4E4;
+                padding-top: 1em;
+                padding-left: 1.5em;
+                padding-right: 1.5em;
+                padding-bottom: 2.5em;
+                border-radius: 15px 15px 15px 45px;
+                border: #000404 solid 2px;
+                box-shadow: -5px 5px 5px 0px #000404;
+                -webkit-box-shadow: -5px 5px 5px 0px #000404;
+                -moz-box-shadow: -5px 5px 5px 0px #000404;
+            }
+            
+            .displayScreen__header {
+                margin-bottom: 1em;
+                text-align: center;
+            }
+            
+            .displayScreen__footer {
+                /* border: papayawhip dashed 2px; */
+                margin-top: 1em;
+            }
+            
+            .displayScreen__image {
+                display: block;
+                width: auto;
+                background-color: whitesmoke;
+                position: relative;
+                text-align: center;
+                border: black solid 2px;
+                border-radius: 5px;
+            }
+            
+            .displayScreen__img {
+                display: inline-block;
+                /* background-color: whitesmoke; */
+                /* border: black solid 2px;
+    border-radius: 5px; */
+            }
+            
+            .displayScreen__label {
+                display: inline-block;
+            }
+            
+            .infoDisplayScreen {
+                background-color: #000404;
+                border-radius: 10px;
+                margin-top: 15px;
+                padding: 15px;
+            }
+            
+            .typesDisplay {
+                margin-top: 15px;
+            }
+            
+            .typeDisplay {
+                background-color: #E4E4E4;
+                display: inline-block;
+                padding: 10px;
+                border: black solid 2px;
+                box-shadow: -5px 5px 5px 0px #000404;
+                -webkit-box-shadow: -5px 5px 5px 0px #000404;
+                -moz-box-shadow: -5px 5px 5px 0px #000404;
+                width: 75px;
+                margin: 0;
+                text-align: center;
+            }
+            
+            .typeDisplay--left {
+                border-radius: 10px 0px 0px 10px;
+            }
+            
+            .typeDisplay--right {
+                border-radius: 0px 10px 10px 0px;
+            }
+            
+            .typeBadge {
+                color: white;
+                background-color: gray;
+                border-radius: 5px 5px 5px 5px;
+                padding: 5px;
+                text-shadow: 1px 1px 2px black;
+            }
+            /* <type Badges> */
+            
+            .typeBadge--water {
+                background-color: #6890F0;
+            }
+            
+            .typeBadge--fire {
+                background-color: #F08030;
+            }
+            
+            .typeBadge--grass {
+                background-color: #77C950;
+            }
+            
+            .typeBadge--poison {
+                background-color: #A03FA0;
+            }
+            
+            .typeBadge--fight {
+                background-color: #C03028;
+            }
+            
+            .typeBadge--ground {
+                background-color: #E6C468;
+            }
+            
+            .typeBadge--bug {
+                background-color: #A8B820;
+            }
+            
+            .typeBadge--ice {
+                background-color: #98D8D8;
+            }
+            
+            .typeBadge--dragon {
+                background-color: #7038F8;
+            }
+            
+            .typeBadge--ghost {
+                background-color: #7F69A2;
+            }
+            
+            .typeBadge--dark {
+                background-color: #7C746C;
+            }
+            
+            .typeBadge--rock {
+                background-color: #B8A038;
+            }
+            
+            .typeBadge--electric {
+                background-color: #F7D85B;
+            }
+            
+            .typeBadge--fairy {
+                background-color: #CF9ECC;
+            }
+            
+            .typeBadge--psychic {
+                background-color: #F95787;
+            }
+            
+            .typeBadge--flying {
+                background-color: #A890F3;
+            }
+            
+            .typeBadge--normal {
+                background-color: #D0D0B7;
+            }
+            
+            .typeBadge--steel {
+                background-color: #BFBFD5;
+            }
+            /* </type Badges >*/
+            
+            .statsDisplay {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+            }
+            
+            .stat {
+                flex-grow: 1;
+                text-align: center;
+            }
+            
+            .stat__gauge {
+                display: inline-block;
+                padding-top: 5px;
+            }
+            
+            .stat__gaugeBar {
+                height: 3px;
+                width: 24px;
+                margin-top: 1px;
+                background-color: #BFBFD5;
+            }
+            
+            .stat__gaugeBar--full {
+                background-color: #6890F0;
+            }
+            
+            .stat__label {
+                color: yellow;
+            }
+            
+            .subDisplays {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 25px;
+                padding: 15px;
+            }
+            
+            .subDisplay {
+                flex-grow: 1;
+                background-color: #000404;
+                border-radius: 10px;
+                margin-top: 15px;
+                padding: 15px;
+                color: yellow;
+            }
+            
+            .subDisplay__label {
+                font-weight: bold;
+            }
+            
+            .subDisplay__value {
+                color: yellow;
+            }
