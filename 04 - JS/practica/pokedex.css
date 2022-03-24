@@ -261,6 +261,30 @@
             }
             /* </type Badges >*/
             
+            .movesDisplay {
+                margin-bottom: 5px;
+                color: yellow;
+            }
+            
+            .movesDisplay__title {
+                font-weight: bold;
+            }
+            
+            .moveList {
+                list-style: none;
+            }
+            
+            .move {
+                border: papayawhip dashed 1px;
+                background-color: #E4E4E4;
+                color: #000404;
+                border-radius: 5px;
+                padding: 5px;
+                margin-top: 3px;
+                width: 150px;
+                text-align: center;
+            }
+            
             .statsDisplay {
                 display: flex;
                 flex-wrap: wrap;

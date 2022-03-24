@@ -8,6 +8,7 @@ const $pokeHeight = document.getElementById("lblPokeHeight");
 const $pokeWeight = document.getElementById("lblPokeWeight");
 const $pokeType01 = document.getElementById("lblPokeType01");
 const $pokeType02 = document.getElementById("lblPokeType02");
+const $pokeMoves = document.getElementById("lstPokeMoves");
 
 const fetchPokemon = () => {
     const pokeNameInput = document.getElementById("pokeName");
@@ -37,7 +38,7 @@ const fetchPokemon = () => {
             setPokeWeight(pokemonHeight + " kg");
             setPokeTypes(data.types);
             setStats(data.stats);
-            // setSpeedGauge(data.stats[0].base_stat);
+            displayMoves(data.moves);
         }
     });
 }
@@ -222,4 +223,17 @@ function resetStatGauge(statName) {
     for (let item of DOMBars) {
         item.classList.remove("stat__gaugeBar--full");
     }
+}
+
+function displayMoves(moveList) {
+    for (const iterator of moveList) {
+        displayMove(iterator.move.name);
+    }
+}
+
+function displayMove(move) {
+    var li = document.createElement('li');
+    li.appendChild(document.createTextNode(move));
+    li.className = "move";
+    $pokeMoves.appendChild(li);
 }
