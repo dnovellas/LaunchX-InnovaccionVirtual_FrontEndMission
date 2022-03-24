@@ -33,7 +33,7 @@ const fetchPokemon = () => {
             let pokemonHeight = data.height;
             setPokeNumber("#" + pokemonNumber);
             setPokeName(pokemonName);
-            setPokeHeight(pokemonWeight + " cm");
+            setPokeHeight((pokemonWeight / 100) + " M");
             setPokeWeight(pokemonHeight + " kg");
             setPokeTypes(data.types);
             setStats(data.stats);
@@ -176,33 +176,27 @@ function getTypeCSSClass(type) {
 function setStats(stats) {
     //PS 0
     let pokeHp = stats[0].base_stat;
-    // console.log(stats[0].stat.name);
-    // console.log(pokeHp);
+    resetStatGauge("pokehp");
     setStatGauge("pokehp", pokeHp);
     //ATK 1
     let pokeAtk = stats[1].base_stat;
-    // console.log(stats[1].stat.name);
-    // console.log(pokeAtk);
+    resetStatGauge("pokeatk");
     setStatGauge("pokeatk", pokeAtk);
     //DEF 2
     let pokeDef = stats[2].base_stat;
-    // console.log(stats[2].stat.name);
-    // console.log(pokeDef);
+    resetStatGauge("pokedef");
     setStatGauge("pokedef", pokeDef);
     //SP ATK 3
     let pokeSpAtk = stats[3].base_stat;
-    // console.log(stats[3].stat.name);
-    // console.log(pokeSpAtk);
+    resetStatGauge("pokespatk");
     setStatGauge("pokespatk", pokeSpAtk);
     // SP DEF 4
     let pokeSpDef = stats[4].base_stat;
-    // console.log(stats[4].stat.name);
-    // console.log(pokeSpDef);
+    resetStatGauge("pokespdef");
     setStatGauge("pokespdef", pokeSpDef);
     // SPEED 5
     let pokeSpeed = stats[5].base_stat;
-    // console.log(stats[5].stat.name);
-    // console.log(pokeSpeed);
+    resetStatGauge("pokeSpeed");
     setStatGauge("pokeSpeed", pokeSpeed);
 }
 
@@ -210,11 +204,22 @@ function setStatGauge(statName, StatValue) {
     let numberOfBars = Math.floor(StatValue / 10);
     let StatDOM = document.getElementById(statName);
     let DOMBars = StatDOM.firstElementChild.children;
+    let counter = 0;
 
-    for (let item of DOMBars) {
-        item.classList.toggle("stat__gaugeBar--full");
+    for (let i = DOMBars.length - 1; i > 0; i--) {
+        counter++;
+        if (counter <= numberOfBars) {
+            DOMBars[i].classList.toggle("stat__gaugeBar--full");
+            // console.log(statName);
+        } else
+            break;
     }
+}
 
-    console.log(statName);
-    console.log(numberOfBars);
+function resetStatGauge(statName) {
+    let StatDOM = document.getElementById(statName);
+    let DOMBars = StatDOM.firstElementChild.children;
+    for (let item of DOMBars) {
+        item.classList.remove("stat__gaugeBar--full");
+    }
 }
