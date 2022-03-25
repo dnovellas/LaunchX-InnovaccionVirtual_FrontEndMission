@@ -226,14 +226,21 @@ function resetStatGauge(statName) {
 }
 
 function displayMoves(moveList) {
+    clearMoves();
     for (const iterator of moveList) {
         displayMove(iterator.move.name);
     }
 }
 
 function displayMove(move) {
-    var li = document.createElement('li');
+    var li = document.createElement('div');
     li.appendChild(document.createTextNode(move));
     li.className = "move";
     $pokeMoves.appendChild(li);
+}
+
+function clearMoves() {
+    while ($pokeMoves.firstChild) {
+        $pokeMoves.removeChild($pokeMoves.firstChild);
+    }
 }

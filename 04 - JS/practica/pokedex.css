@@ -78,7 +78,7 @@
             .pokedex {
                 background-color: #E61F3F;
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: center;
                 flex-wrap: wrap;
                 padding: 2em;
                 border-radius: 15px;
@@ -96,6 +96,7 @@
                 border: black solid 2px;
                 padding: 1em;
                 border-radius: 15px;
+                max-width: 600px;
             }
             
             .searchPanel {
@@ -138,9 +139,6 @@
             
             .displayScreen__img {
                 display: inline-block;
-                /* background-color: whitesmoke; */
-                /* border: black solid 2px;
-    border-radius: 5px; */
             }
             
             .displayScreen__label {
@@ -264,28 +262,43 @@
             .movesDisplay {
                 margin-bottom: 5px;
                 color: yellow;
+                max-width: 600px;
             }
             
             .movesDisplay__title {
                 font-weight: bold;
             }
             
-            .moveList {
-                list-style: none;
+            .movesDisplay__moves {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 5px;
+                /* gap: 5px; */
             }
             
             .move {
-                border: papayawhip dashed 1px;
+                flex-grow: 1;
+                width: 100px;
                 background-color: #E4E4E4;
                 color: #000404;
                 border-radius: 5px;
                 padding: 5px;
-                margin-top: 3px;
-                width: 150px;
                 text-align: center;
+                display: inline-block;
             }
             
             .statsDisplay {
+                justify-content: center;
+                margin-top: 15px;
+            }
+            
+            .statsDisplay__title {
+                color: yellow;
+                font-weight: bold;
+            }
+            
+            .statsDisplay__stats {
                 display: flex;
                 flex-wrap: wrap;
                 gap: 10px;
